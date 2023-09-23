@@ -1,4 +1,4 @@
-name: Build and Push to Staging
+name: Build and Push to feature
 
 on:
   push:
@@ -31,7 +31,7 @@ jobs:
       - name: Run Tests
         run: | 
           python test.py
-      - name: Push Dev to staging
+      - name: Push Dev to feature
         run: |
           #Configure Git
           git config user.email "dhananjaywaghe2@gmail.com"
@@ -41,10 +41,10 @@ jobs:
           git fetch origin 
 
           #Checkout Staging Branch
-          git checkout staging
+          git checkout feature
 
           # Merge Dev into Staging.
           git merge --allow-unrelated-histories dev
 
           #Push to Staging Branch
-          git push origin staging
+          git push origin feature
