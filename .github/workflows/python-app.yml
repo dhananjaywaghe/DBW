@@ -3,7 +3,11 @@ name: Build and Push to Staging
 on:
   push:
     branches:
-      - dev  
+      - dev
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
     
 
 jobs:
