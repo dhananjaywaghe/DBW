@@ -43,8 +43,8 @@ jobs:
           #Checkout Staging Branch
           git checkout feature
 
-          # Merge Dev into Staging.
+          # Merge Dev into feature.
           git merge --allow-unrelated-histories dev
 
-          #Push to Staging Branch
+          #Push to feature Branch
           git push origin feature
