@@ -1,0 +1,6 @@
+flask
+numpy
+pytest
+# flake8
+# unittest
+#requests
