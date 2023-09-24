@@ -31,6 +31,7 @@ jobs:
       - name: Run Tests
         run: | 
           python test.py
+          
       - name: Push Dev to feature
         run: |
           #Configure Git
@@ -43,9 +44,10 @@ jobs:
           #Checkout Staging Branch
           git checkout feature
 
-          
+
           # Merge Dev into feature.
           git merge --allow-unrelated-histories dev
+
 
           #Push to feature Branch
           git push origin feature
